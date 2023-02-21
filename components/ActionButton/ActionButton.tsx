@@ -1,0 +1,14 @@
+import React from 'react'
+import styles from "./ActionButton.module.css";
+
+type ButtonType={
+  text: string;
+  onClick: ()=> void;
+}
+
+const ActionButton: React.FC<ButtonType> = ({text,onClick}) => {
+  return (
+   <button onClick={onClick} className={styles.main}>{text}</button>
+  )
+}
+export default ActionButton
